@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ATS-Friendly Resume Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>ATS-Friendly Resume Generator</h1>
+    <form action="{{ url_for('generate_resume') }}" method="POST">
+        <textarea name="job_description" rows="10" cols="50" placeholder="Enter job description"></textarea><br>
+        <input type="submit" value="Generate Resume">
+    </form>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generated Resume</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Generated Resume</h1>
+    <pre>{{ resume_content }}</pre>
+    <form action="{{ url_for('download_resume') }}" method="POST">
+        <input type="hidden" name="resume_content" value="{{ resume_content }}">
+        <input type="submit" value="Download Resume">
+    </form>
+</body>
+</html>
